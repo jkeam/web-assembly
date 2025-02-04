@@ -23,3 +23,8 @@ go.work.sum
 
 # env file
 .env
+
+# build files
+wasm/html/wasm.wasm
+wasm/server-amd64
+wasm/server-arm64
