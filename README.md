@@ -19,7 +19,7 @@ make run
 
 ### Prerequisite
 
-1. Wasmedge v0.14.1+
+1. WasmEdge v0.14.1+
 2. TinyGo v0.35.0+
 
 ### Running
