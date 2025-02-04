@@ -2,11 +2,8 @@ package main
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
-	"github.com/stealthrocket/net/wasip1" // needed to use that Listen instead of net.Listen
 	"net/http"
-	"time"
 )
 
 // Handler functions
@@ -86,32 +83,13 @@ func (h *AddHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func listenAndServe(port string, mux *http.ServeMux) {
-	listener, err := wasip1.Listen("tcp4", port)
-	if err != nil {
-		panic(err)
-		return
-	}
-
-	server := &http.Server{
-		ReadHeaderTimeout: 3 * time.Second,
-		IdleTimeout:       3 * time.Second,
-		Handler:           mux,
-	}
-	err = server.Serve(listener)
-	if err != nil && !errors.Is(err, http.ErrServerClosed) {
-		panic(err)
-		return
-	}
-	fmt.Println("Server stopped listening")
-}
-
 func main() {
 	mux := http.NewServeMux()
+
 	mux.Handle("/", &HomeHandler{})
 	mux.Handle("/add", &AddHandler{})
 
 	port := ":8080"
 	fmt.Printf("Server started on %s", port)
-	listenAndServe(port, mux)
+	http.ListenAndServe(port, mux)
 }

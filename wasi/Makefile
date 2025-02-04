@@ -1,10 +1,14 @@
 .PHONY: run
-run: build
+run: lint build
 	wasmedge ./main.wasm
+
+.PHONY: lint
+lint:
+	gofmt -w ./main.go
 
 .PHONY: build
 build: clean
-	tinygo build -o ./main.wasm -target wasi ./main.go
+	GOOS=wasip1 GOARCH=wasm go build -o main.wasm ./main.go
 	wasmedge compile ./main.wasm ./main.wasm
 
 .PHONY: clean
