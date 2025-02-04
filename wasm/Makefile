@@ -2,7 +2,7 @@
 run: build
 	./server-amd64
 
-.PHONY: run
+.PHONY: runmac
 runmac: build
 	./server-arm64
 
