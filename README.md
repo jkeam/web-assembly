@@ -1,2 +1,10 @@
-# web-assembly
-WebAssembly (WASM and WASI) demos.
+# WebAssembly
+
+## WASM
+
+```shell
+# runmac target on a mac
+make run
+```
+
+## WASI

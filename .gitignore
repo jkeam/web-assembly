@@ -28,3 +28,4 @@ go.work.sum
 wasm/html/wasm.wasm
 wasm/server-amd64
 wasm/server-arm64
+wasm/html/wasm_exec.js
