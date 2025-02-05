@@ -1,4 +1,5 @@
-FROM scratch
+FROM registry.access.redhat.com/ubi9-micro:9.5-1738659858
 COPY ./html/ ./html
 COPY ./server-amd64 .
+EXPOSE 8080
 CMD ["./server-amd64"]

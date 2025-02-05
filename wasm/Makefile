@@ -3,14 +3,18 @@ run: build
 	./server-amd64
 
 .PHONY: runmac
-runmac: build
+runmac: buildmac
 	./server-arm64
 
 .PHONY: build
 build: clean wasm_exec
 	tinygo build -o ./html/wasm.wasm -target wasm ./wasm.go
 	GOOS=linux GOARCH=amd64 go build -o server-amd64 ./server.go
-	GOOS=darwin GOARCH=arm64 go build -o server-arm64 ./server.go
+
+.PHONY: buildmac
+buildmac: clean wasm_exec
+	tinygo build -o ./html/wasm.wasm -target wasm ./wasm.go
+	GOOS=darwin GOARCH=arm64 go -o server-arm64 ./server.go
 
 .PHONY: wasm_exec
 wasm_exec:
