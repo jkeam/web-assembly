@@ -65,3 +65,4 @@ curl -X POST -d '{"operand1": 1, "operand2": 2}' http://localhost:8080/add
 2. [WASI and Go not working without special code](https://github.com/dispatchrun/net/issues/37)
 3. [WASI and Go example code](https://github.com/ldemailly/go-scratch/blob/main/tinyhttp/tinyhttp.go)
 4. [WasmEdge and CRUN](https://wasmedge.org/docs/develop/deploy/intro#with-crun)
+5. [WASM Containers](https://opensource.com/article/22/10/wasm-containers)
