@@ -5,6 +5,8 @@
 ### Prerequisite
 
 1. TinyGo v0.35.0+
+2. Go v1.21.11
+3. Podman v5+
 
 ### Running
 
@@ -21,6 +23,8 @@ make run
 
 1. WasmEdge v0.14.1+
 2. TinyGo v0.35.0+
+3. Go v1.21.11
+4. Podman v5+
 
 ### Running
 

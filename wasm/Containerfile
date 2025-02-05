@@ -1,0 +1,4 @@
+FROM scratch
+COPY ./html/ ./html
+COPY ./server-amd64 .
+CMD ["./server-amd64"]
