@@ -24,6 +24,7 @@ spec:
           - containerPort: 8080
             name: theport
       restartPolicy: Always
+      imagePullPolicy: Always
 
 ---
 apiVersion: apps/v1
@@ -53,3 +54,4 @@ spec:
           - containerPort: 8080
             name: theport
       restartPolicy: Always
+      imagePullPolicy: Always
