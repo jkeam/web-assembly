@@ -59,7 +59,23 @@ open a new terminal and run:
 curl -X POST -d '{"operand1": 1, "operand2": 2}' http://localhost:8080/add
 ```
 
-### WASI References
+## OpenShift
+
+1. Update `./openshift/console-link.yaml` with your cluster and domain name
+
+2. Change the container runtime:
+
+  ```shell
+  oc apply -f ./openshift/runtime.yaml
+  ```
+
+3. Then create everything:
+
+  ```shell
+  oc apply -k ./openshift
+  ```
+
+## References
 
 1. [WASI and Go](https://go.dev/blog/wasi)
 2. [WASI and Go not working without special code](https://github.com/dispatchrun/net/issues/37)

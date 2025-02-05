@@ -1,0 +1,37 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: wasm
+  namespace: wasm
+  labels:
+    app: wasm
+spec:
+  path: /
+  to:
+    kind: Service
+    name: wasm
+    weight: 100
+  port:
+    targetPort: port8080
+  tls:
+    termination: edge
+
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: wasi
+  namespace: wasi
+  labels:
+    app: wasi
+spec:
+  path: /
+  to:
+    kind: Service
+    name: wasi
+    weight: 100
+  port:
+    targetPort: port8080
+  tls:
+    termination: edge

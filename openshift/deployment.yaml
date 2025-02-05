@@ -1,0 +1,55 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wasm
+  namespace: wasm
+  labels:
+    app: wasm
+spec:
+  selector:
+    matchLabels:
+      app: wasm
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wasm
+    spec:
+      containers:
+        - name: wasm
+          image: WASM_IMAGE
+          ports:
+          - containerPort: 8080
+            name: theport
+      restartPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wasi
+  namespace: wasi
+  labels:
+    app: wasi
+spec:
+  selector:
+    matchLabels:
+      app: wasi
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wasi
+      annotations:
+        module.wasm.image/variant: compat
+    spec:
+      containers:
+        - name: wasi
+          image: WASI_IMAGE
+          ports:
+          - containerPort: 8080
+            name: theport
+      restartPolicy: Always
