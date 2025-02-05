@@ -7,7 +7,7 @@ images:
   digest: sha256:3ee66e67a287bd0688a2d1699e2679927c328e3f42c9eee7ce3f1463b44a7311
 - name: WASI_IMAGE
   newName: quay.io/jkeam/wasi
-  digest: sha256:b912c51e9f385e42ea4505ba8b6e00f1dc7df37092abc73dfc4f71bde301d6b7
+  digest: sha256:f93a5efcd732e5742d015f83d7f38ea8cc12513d5148290317b498dd91ec2dba
 
 resources:
 - namespace.yaml
