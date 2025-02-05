@@ -1,4 +1,4 @@
-FROM scratch
+FROM docker.io/wasmedge/slim-runtime:0.13.5
 COPY ./main.wasm /
 EXPOSE 8080
-CMD ["/main.wasm"]
+CMD ["wasmedge", "--dir", ".:/", "/main.wasm"]
