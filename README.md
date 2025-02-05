@@ -82,3 +82,4 @@ curl -X POST -d '{"operand1": 1, "operand2": 2}' http://localhost:8080/add
 3. [WASI and Go example code](https://github.com/ldemailly/go-scratch/blob/main/tinyhttp/tinyhttp.go)
 4. [WasmEdge and CRUN](https://wasmedge.org/docs/develop/deploy/intro#with-crun)
 5. [WASM Containers](https://opensource.com/article/22/10/wasm-containers)
+6. [OpenShift Runtime Docs](https://docs.openshift.com/container-platform/4.17/machine_configuration/machine-configs-custom.html#set-the-default-max-container-root-partition-size-for-overlay-with-crio_machine-configs-custom)
