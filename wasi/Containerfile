@@ -1,4 +1,4 @@
 FROM scratch
-COPY ./main.wasm .
+COPY ./main.wasm /
 EXPOSE 8080
-CMD ["./main.wasm"]
+CMD ["/main.wasm"]
