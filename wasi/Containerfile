@@ -1,3 +1,4 @@
 FROM scratch
 COPY ./main.wasm .
+EXPOSE 8080
 CMD ["./main.wasm"]

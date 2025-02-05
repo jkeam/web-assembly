@@ -9,7 +9,7 @@ lint:
 .PHONY: build
 build: clean
 	GOOS=wasip1 GOARCH=wasm go build -o main.wasm ./main.go
-	wasmedge compile ./main.wasm ./main.wasm
+	# wasmedge compile ./main.wasm ./main.wasm
 
 .PHONY: clean
 clean:
