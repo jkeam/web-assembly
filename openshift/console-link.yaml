@@ -4,7 +4,7 @@ kind: ConsoleLink
 metadata:
   name: wasm
 spec:
-  href: 'https://chatbot-chatbot.apps.clustername.domainname.com'
+  href: 'https://wasm-wasm.apps.clustername.domainname.com'
   location: ApplicationMenu
   text: WASM
   applicationMenu:
@@ -17,7 +17,7 @@ kind: ConsoleLink
 metadata:
   name: wasi
 spec:
-  href: 'https://chatbot-chatbot.apps.clustername.domainname.com'
+  href: 'https://wasi-wasi.apps.clustername.domainname.com'
   location: ApplicationMenu
   text: WASI
   applicationMenu:
