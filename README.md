@@ -63,13 +63,13 @@ curl -X POST -d '{"operand1": 1, "operand2": 2}' http://localhost:8080/add
 
 1. Update `./openshift/console-link.yaml` with your cluster and domain name
 
-2. Change the container runtime:
+2. Change the container runtime and wait for the worker nodes to recycle:
 
   ```shell
   oc apply -f ./openshift/runtime.yaml
   ```
 
-3. Then create everything:
+3. Then deploy apps:
 
   ```shell
   oc apply -k ./openshift
